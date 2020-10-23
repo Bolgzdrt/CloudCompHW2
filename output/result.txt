@@ -1,0 +1,11 @@
+Files in /data: test1.txt, test2.txt, test3.txt
+
+Number of words in test1.txt: 9
+Number of words in test2.txt: 17
+Number of words in test3.txt: 19
+
+Grand total of words from all files: 45
+
+File with highest word count: test3.txt
+
+Computer's IP Address: 192.168.1.14
