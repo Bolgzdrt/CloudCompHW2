@@ -1,7 +1,7 @@
 import os
 import socket
 
-data_dir = './data/'
+data_dir = '/home/data/'
 
 files = os.listdir(data_dir)
 txt_files = filter(lambda x: x[-4:] == '.txt', files)
@@ -10,7 +10,7 @@ txt_files_list = list(txt_files)
 new_file = open('./output/result.txt', 'w+')
 
 # 4a
-new_file.write('Files in /data: ' + ', '.join(txt_files_list) + '\n\n')
+new_file.write('Files in /home/data: ' + ', '.join(txt_files_list) + '\n\n')
 
 file_directory_list = [data_dir + s for s in txt_files_list]
 num_words = []
