@@ -17,15 +17,18 @@ num_words = []
 n = 0
 max_words = 0
 for i in file_directory_list:
-  with open(i, 'r') as f:
-    for line in f:
-      words = line.split()
-      num_words.append(len(words))
+  if os.stat(i).st_size == 0:
+    num_words.append(0)
+  else:
+    with open(i, 'r') as f:
+      for line in f:
+        words = line.split()
+        num_words.append(len(words))
   # 4b
-  new_file.write('Number of words in ' + i[7:] + ': {}'.format(num_words[n]) + '\n')
+  new_file.write('Number of words in ' + i[11:] + ': {}'.format(num_words[n]) + '\n')
   if num_words[n] >= max_words:
     max_words = num_words[n]
-    max_words_file = i[7:]
+    max_words_file = i[11:]
   n += 1
 
 grand_total = sum(num_words)
